@@ -1,5 +1,10 @@
-time=int(input("Введите время, секунды"))
-hours=time//3600
-minutes=time//60-hours*60
-sec=time-minutes*60-hours*3600
-print(f"Время в формате чч:мм:сс   {hours} : {minutes} : {sec}")
+name = input('enter name')
+surname = input('enter surname')
+year = int(input('enter year'))
+city = input('enter city')
+email = input('enter email')
+telephone = input('input telephone')
+
+def my_func (name, surname, year, city, email, telephone):
+     return ' '.join([name, surname, year, city, email, telephone])
+print(my_func(surname = 'Frolov', name = 'Sergey', year = '1990', city = 'Syzran', email = 'error@mail.ru', telephone = '8-903-300-99-87'))

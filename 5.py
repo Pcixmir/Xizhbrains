@@ -1,10 +1,17 @@
-profit = float(input("Выручка"))
-costs= float(input("Издержки"))
-if profit > costs:
-    print(f"Фирма работает с прибылью. Рентабельность {profit / costs}")
-    workers = int(input("Введите количество сотрудников"))
-    print(f"прибыль в расчете на одного сторудника сотавила {profit / workers}")
-elif profit == costs:
-    print("Фирма работает в ноль")
-else:
-    print("Фирма работает в убыток")
+import sys
+
+result = 0
+while True:
+    line = input("Enter number or special token q fo exite: ")
+    tokens = line.split(" ")
+    for token in tokens:
+        try:
+            number = float(token)
+            result += number
+        except:
+            if token == 'q':
+                print(f"You sum is {result}. Program is terminated")
+                exit(0)
+            else:
+                print(f"You sum is {result}. Input error", file=sys.stderr)
+                exit(1)

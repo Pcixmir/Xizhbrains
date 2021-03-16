@@ -1,8 +1,20 @@
-y = 16
-z = 21
-print("Переменные a и b - ", y, z)
-string1 = input("Введите первую строку ")
-number1 = int(input("Введите первое число "))
-string2 = input("Введите вторую строку ")
-number2 = int(input("Введите второе число "))
-print("Введеные значения - %10s %5d %10s %5d" % (string1, number1, string2, number2))
+def div(*args):
+
+    try:
+        arg1 = int(input("Введите делимое"))
+        arg2 = int(input("Введите делитель"))
+        res = arg1 / arg2
+    except ValueError:
+        return ''
+    except ZeroDivisionError:
+        return "Wrong devider! You can't use zero as a devider"
+
+    return res
+
+    if arg2 != 0:
+        return arg1 / arg2
+    else:
+        print("Wrong number! Devider can't be null")
+
+
+print(f'result  {div()}')
